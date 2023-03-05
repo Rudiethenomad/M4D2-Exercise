@@ -1,3 +1,4 @@
+/*
 const URL_ENDPOINT = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=eminem';
 const paragraph = document.getElementById('eminemSection');
 //const button = document.getElementById('btn');
@@ -19,7 +20,7 @@ const requestLoadCallback = function () {
   console.log('Response handled successfully!')
 }
 */
-request.onload = requestLoadCallback;
+//request.onload = requestLoadCallback;
 /*
 const btnClickCallback = function () {
   // third option is called async
@@ -39,3 +40,21 @@ const btnClickCallback = function () {
 
 button.addEventListener('click', btnClickCallback);
 */
+
+
+console.log ("test");
+
+const URL_ENDPOINT = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=eminem';
+const paragraph = document.getElementById('eminemSection');
+const request = new XMLHttpRequest();
+const requestLoadCallback = function () {
+    if (request.status !== 200) {
+      paragraph.innerText = 'there was an error!'
+      return;
+    }
+    const responseObject = JSON.parse(request.response);
+
+
+}
+request.onload = requestLoadCallback;
+
