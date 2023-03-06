@@ -3,45 +3,68 @@
 
 //console.log ("test");
 
-const URL_ENDPOINT = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=eminem';
-const paragraph = document.getElementById('eminemSection');
+const first_album = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=eminem'
+
 const request = new XMLHttpRequest();
-const requestLoadCallback = function () {
-    if (request.status !== 200) {
-      paragraph.innerText = 'there was an error!'
-      return;
-    }
+
+const handleRequestLoad = function (){
     const responseObject = JSON.parse(request.response);
 
+    const eminemAlbum = responseObject
 
+    console.log(request.status);
+    
 }
-request.onload = requestLoadCallback;
 
 
-const URL_END = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=metallica';
-const par = document.getElementById('metallicaSection');
+
+request.onload = handleRequestLoad;
+
+request.open('GET', first_album);
+request.send();
+
+
+
+
+const second_album = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=metallica'
+
 const request = new XMLHttpRequest();
-const requestCallback = function () {
-    if (request.status !== 200) {
-      par.innerText = 'there was an error!'
-      return;
-    }
+
+const secondRequestLoad = function (){
     const responseObject = JSON.parse(request.response);
 
+    const eminemAlbum = responseObject
 
+    console.log(request.status);
+    
 }
-request.onload = requestCallback;
 
-const URL_Last = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=metallica';
-const prg = document.getElementById('queenSection');
+
+
+request.onload = secondRequestLoad;
+
+request.open('GET', second_album);
+request.send();
+
+
+
+const third_album = 'https://striveschool-api.herokuapp.com/api/deezer/search?q=queen'
+
 const request = new XMLHttpRequest();
-const requestLastCallback = function () {
-    if (request.status !== 200) {
-      prg.innerText = 'there was an error!'
-      return;
-    }
+
+const thirdRequestLoad = function (){
     const responseObject = JSON.parse(request.response);
 
+    const eminemAlbum = responseObject
 
+    console.log(request.status);
+    
 }
-request.onload = requestLastCallback;
+
+
+
+request.onload = thirdRequestLoad;
+
+request.open('GET', second_album);
+request.send();
+
