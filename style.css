@@ -231,21 +231,3 @@ ul {
 }
 
 
-.crow {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.crow > div[class*='col-'] {
- display: flex;
-}
-
-.card_exp{
-  display: flex;
-  justify-content: space-between;
-  justify-items:center;
-  align-items: center;
-  margin-left: 300px;
-  margin-right: 200px;
-  margin-top: 100px;
-}
