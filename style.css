@@ -229,3 +229,13 @@ ul {
 .mainPage img {
   width: 200px;
 }
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.row > div[class*='col-'] {
+ display: flex;
+}
